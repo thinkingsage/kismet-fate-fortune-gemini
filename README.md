@@ -1,2 +1,2 @@
-# kismet-fate-fortune
-An evolutionary re-take on fortune-mod
+# kismet
+An evolutionary re-take on `fortune-mod`.
