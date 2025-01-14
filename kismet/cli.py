@@ -1,12 +1,25 @@
 from google import genai
+from prompt_toolkit import prompt
 import typer
 import os
 
 
+
 # Only run this block for Google AI API
 gemini_api_key = os.environ.get("GEMINI_API_KEY")
+
+# Check if the API key is set
 if not gemini_api_key:
-    raise ValueError("GEMINI_API_KEY environment variable not set.")
+    def input_api_key(message: str) -> dict:
+        return {
+            'type': 'input',
+            'name': 'api_key',
+            'message': message
+        }
+    gemini_api_key = prompt(message="Please enter your Gemini API key:")
+    if not gemini_api_key:
+        raise ValueError("GEMINI_API_KEY environment variable not set.")
+    
 client = genai.Client(api_key=gemini_api_key)
 
 # CLI commands
