@@ -16,7 +16,7 @@ An evolutionary re-take on `fortune-mod`, Kismet is a modern Python command-line
 Kismet can be installed using `poetry`:
 
 ```bash
-poetry install kismet
+poetry install kismet-fortune
 ```
 
 ## Useage

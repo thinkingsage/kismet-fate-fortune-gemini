@@ -1,9 +1,9 @@
 [project]
-name = "kismet"
+name = "kismet-fortune"
 version = "0.1.0"
 description = "An evolutionary take on fortune-mod."
 authors = [
-    {name = "Steven Miklovic",email = "steven@exarcos.net"}
+    {name = "Steven Miklovic",email = "steven@thinkingsage.com"}
 ]
 license = {text = "GPL3.0"}
 readme = "README.md"
