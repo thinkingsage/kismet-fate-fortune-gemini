@@ -43,7 +43,7 @@ def goodbye(name: str, formal: bool = False):
 @app.command()
 def fortune(prompt_text: str = "Kismet, tell me my fortune"):
     try:
-        chat = client.models.generate_content_stream(model='gemini-2.0-flash-exp', config=types.GenerateContentConfig(system_instruction=system_instruction), contents=prompt_text,)
+        chat = client.models.generate_content_stream(model='gemini-2.5-flash-exp', config=types.GenerateContentConfig(system_instruction=system_instruction), contents=prompt_text,)
         full_text = ""
         for message in chat:
             full_text += message.text
