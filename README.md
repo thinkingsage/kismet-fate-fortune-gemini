@@ -1,41 +1,130 @@
-# kismet
+# Kismet Fortune 🔮
 
-An evolutionary re-take on `fortune-mod`, Kismet is a modern Python command-line tool that delivers random quotations from llm generators, offering a touch of serendipity to your terminal. 
+> *An evolutionary take on the classic `fortune-mod` command*
 
-## Features
+Kismet is a modern Python CLI tool that generates personalized fortunes, quotes, and wisdom using Google's Gemini AI. Get a touch of serendipity in your terminal with AI-powered insights.
 
-* **AI-Generated Fortunes:** Uses Google's Gemini API to generate personalized fortunes
-* **Multiple Output Formats:** Support for plain text and JSON output
-* **Modern CLI:** Built with Typer for a clean command-line interface
-* **Secure API Key Management:** Uses environment variables for API key storage
-* **Extensible Architecture:** Modular design for easy enhancement
+## ✨ Features
 
-## Installation
+- 🤖 **AI-Generated Content** - Powered by Google's Gemini API
+- 📄 **Multiple Formats** - Plain text and JSON output
+- 🎯 **Customizable Prompts** - Tailor fortunes to your needs
+- 🔒 **Secure** - Environment-based API key management
+- ⚡ **Fast & Modern** - Built with Typer and async support
+- 🧪 **Well-Tested** - Comprehensive test coverage
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.9+
+- Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
+
+### Installation
 
 ```bash
-# Install dependencies
+# Clone the repository
+git clone https://github.com/your-username/kismet-fate-fortune.git
+cd kismet-fate-fortune
+
+# Install with Poetry (recommended)
 poetry install
 
-# Or with pip (after cloning)
+# Or with pip
 pip install -e .
 ```
 
-## Setup
+### Setup API Key
 
-Set your Gemini API key:
 ```bash
+# Set your Gemini API key
 export GEMINI_API_KEY="your-api-key-here"
+
+# Or add to your shell profile for persistence
+echo 'export GEMINI_API_KEY="your-api-key-here"' >> ~/.bashrc
 ```
 
-## Usage
+## 📖 Usage
+
+### Basic Commands
 
 ```bash
-kismet "Tell me my fortune"    # Generate a fortune
-kismet --version               # Show version
-kismet --format json "wisdom"  # Output in JSON format
+# Get a random fortune
+kismet
+
+# Custom prompt
+kismet "Give me wisdom about coding"
+
+# JSON output for scripting
+kismet --format json "motivational quote"
+
+# Check version
+kismet --version
 ```
 
+### Example Output
 
-## Acknowledgements
+```bash
+$ kismet "wisdom about life"
 
-Inspired by the original `fortune-mod` utility and its contributors. 
+"The journey of a thousand miles begins with a single step, but remember 
+that even the longest journey is made up of individual moments of choice."
+
+— Lao Tzu (adapted)
+```
+
+```bash
+$ kismet --format json "coding wisdom"
+{
+  "fortune": "Code is like humor. When you have to explain it, it's bad.",
+  "prompt": "coding wisdom"
+}
+```
+
+## 🛠️ Development
+
+### Running Tests
+
+```bash
+# Run all tests
+poetry run pytest
+
+# With coverage
+poetry run pytest --cov=kismet_fortune
+```
+
+### Project Structure
+
+```
+kismet-fate-fortune/
+├── kismet_fortune/
+│   ├── __init__.py      # Package interface
+│   ├── cli.py           # Command-line interface
+│   ├── fortune.py       # Core fortune generation
+│   └── __main__.py      # Entry point
+├── tests/
+│   └── test_fortune.py  # Test suite
+├── pyproject.toml       # Project configuration
+└── README.md           # This file
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgements
+
+- Inspired by the original `fortune-mod` utility
+- Built with [Typer](https://typer.tiangolo.com/) for the CLI
+- Powered by [Google's Gemini API](https://ai.google.dev/)
+
+---
+
+*"Fortune favors the bold, but Kismet favors the curious."* ✨ 
