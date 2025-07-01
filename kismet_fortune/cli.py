@@ -16,7 +16,7 @@ def fortune(
 ) -> None:
     """Generate a fortune using AI."""
     if version:
-        typer.echo("kismet-fortune 0.1.0")
+        typer.echo("kismet-fortune 0.2.0")
         return
     
     try:
