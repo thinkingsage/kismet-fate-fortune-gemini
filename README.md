@@ -49,22 +49,22 @@ echo 'export GEMINI_API_KEY="your-api-key-here"' >> ~/.bashrc
 
 ```bash
 # Get a random fortune
-kismet
+fortune-ai
 
 # Custom prompt
-kismet "Give me wisdom about coding"
+fortune-ai "Give me wisdom about coding"
 
 # JSON output for scripting
-kismet --format json "motivational quote"
+fortune-ai --format json "motivational quote"
 
 # Check version
-kismet --version
+fortune-ai --version
 ```
 
 ### Example Output
 
 ```bash
-$ kismet "wisdom about life"
+$ fortune-ai "wisdom about life"
 
 "The journey of a thousand miles begins with a single step, but remember 
 that even the longest journey is made up of individual moments of choice."
@@ -73,7 +73,7 @@ that even the longest journey is made up of individual moments of choice."
 ```
 
 ```bash
-$ kismet --format json "coding wisdom"
+$ fortune-ai --format json "coding wisdom"
 {
   "fortune": "Code is like humor. When you have to explain it, it's bad.",
   "prompt": "coding wisdom"
