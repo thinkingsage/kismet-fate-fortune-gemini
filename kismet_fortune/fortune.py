@@ -24,7 +24,7 @@ class FortuneGenerator:
         """Generate a fortune based on the given prompt."""
         try:
             chat = self.client.models.generate_content_stream(
-                model='gemini-2.0-flash-exp',
+                model='gemini-2.5-flash-exp',
                 config=types.GenerateContentConfig(system_instruction=self.system_instruction),
                 contents=prompt
             )
